@@ -1,4 +1,4 @@
-@Library('softeon-devsecops@1.1') _
+@Library('softeon-devsecops@master') _
 
 standardPipeline()
 
