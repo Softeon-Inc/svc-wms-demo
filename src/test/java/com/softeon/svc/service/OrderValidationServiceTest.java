@@ -1,27 +1,37 @@
-package com.softeon.svc.service;
+package com.softeon.wms.service;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class OrderValidationServiceTes* {
+class OrderValidationServiceTest {
 
-    private final OrderValidat*onService service =
-            ne* OrderValidationService();
+    private final OrderValidationService service =
+        new OrderValidationService();
 
-    @T*st
-    void testValidQuantity() {
-*       assertTrue(service.isValidQ*antity(10));
+    @Test
+    void shouldReturnTrueForValidQuantity() {
+        assertTrue(service.isValidQuantity(10));
     }
 
     @Test
-    *oid testInvalidQuantity() {
-      * assertFalse(service.isValidQuanti*y(0));
+    void shouldReturnFalseForInvalidQuantity() {
+        assertFalse(service.isValidQuantity(0));
     }
 
     @Test
-    void t*stPriceCalculation() {
-        ass*rtEquals(100.0,
-                se*vice.calculateTotalPrice(10, 10.0)*;
+    void shouldCalculateTotalPrice() {
+        assertEquals(
+                100.0,
+                service.calculateTotalPrice(10, 10.0)
+        );
+    }
+
+    @Test
+    void shouldThrowExceptionForInvalidQuantity() {
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> service.calculateTotalPrice(0, 10.0)
+        );
     }
 }
