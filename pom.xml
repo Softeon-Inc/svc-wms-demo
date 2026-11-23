@@ -76,13 +76,13 @@
 	</build>
 	<distributionManagement>
     <repository>
-        <id>nexus</id>
+        <id>nexus-deploy</id>
         <url>
             https://nexus-dev.softeon.com/repository/maven-public/
         </url>
     </repository>
     <snapshotRepository>
-        <id>nexus</id>
+        <id>nexus-deploy</id>
         <url>
             https://nexus-dev.softeon.com/repository/maven-snapshots/
         </url>
