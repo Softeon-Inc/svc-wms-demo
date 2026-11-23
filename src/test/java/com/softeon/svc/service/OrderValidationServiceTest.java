@@ -1,4 +1,4 @@
-package com.softeon.wms.service;
+package com.softeon.svc.service;
 
 import org.junit.jupiter.api.Test;
 
