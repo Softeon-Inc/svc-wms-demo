@@ -1,4 +1,4 @@
 @Library('softeon-devsecops@master') _
 
-promotionPipeline()
+standardPipeline()
 
