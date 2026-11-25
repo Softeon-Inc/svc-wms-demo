@@ -1,5 +1,2 @@
 application:
   name:svc-wms-demo
-
-
-profile:java-k8s
