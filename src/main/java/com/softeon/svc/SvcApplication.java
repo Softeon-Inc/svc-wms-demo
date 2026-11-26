@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SvcApplication {
 
 	public static void main(String[] args) {
-		String abc="";
+		int abc="";
 		if(abc.equals("abc")){}
 		SpringApplication.run(SvcApplication.class, args);
 	}
